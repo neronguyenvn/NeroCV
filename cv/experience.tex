@@ -9,17 +9,17 @@
     {
         \begin{cvitems}
             \item {
-                Develope launcher feature to manage user apps alongside enterprise apps.
-                Handle scenarios when new apps are added or removed, or new notifications arrive.
+                Develope launcher feature to manage user apps alongside enterprise web apps.
             }
             \item {
-                Leverage system services to overlay system layouts and retrieve notification data also used to control current music service.
-                Implement foreground service to draw overlay movable custom components or in-app ones with dynamic contexts based on permission.
+                Leverage system services to overlay system layouts and manage notification data, including controlling current music service.
+                Implemented foreground service to draw overlay custom components(including camera) or in-app elements based on context.
+                Create permission manager to dynamically check run-time and special permissions, including permission chains, exposing checks as Flows for reactive handling.
             }
             \item {
-                Separated business logic into use cases from UI code to facilitate sharing between activity and service.
-                Enhance WebView interaction pattern to handle its requests and send responses to correct WebView, even if their requests have same commands.
-                Address memory leaks, incorrect context usages, and disk accesses on main thread using LeakCanary and StrictMode.
+                Separate business logic into use cases from UI layer to facilitate sharing between activities and services.
+                Enhance WebView interaction pattern: Communicate using enums and sent responses only to the correct WebView, even if their requests had the same commands.
+                Address memory leaks, incorrect context usage, and improve UI thread performance by running slow calls and disk accesses on appropriate dispatchers using LeakCanary and StrictMode.
             }
         \end{cvitems}
     }
@@ -32,13 +32,13 @@
     {
         \begin{cvitems}
             \item {
-                Develop Android app connected to Supabase Realtime for admin users to manage user information and update newest class time information displayed in user app.
+                Develop Android app connected to Supabase Realtime for admin users to manage real-time user information and update newest class time information displayed in user app.
                 Implement preloading data and real-time channels during SplashScreen state.
                 Adapt time display based on the device timezone using receivers.
             }
             \item {
                 Develope virtual pet app.
-                Implement pet room for chat (voice downloaded with OkHttp) and interaction.
+                Implement pet room for chat by text or voice and and send gifts to increase indamantacy.
                 Create various Compose animations (shimmer, droplet, flashcard, etc.).
                 Set up interceptors for internet connectivity checks and authentication headers.
             }
