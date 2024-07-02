@@ -13,12 +13,13 @@
             }
             \item {
                 Leverage system services to overlay system layouts and manage notification data, including controlling current music service.
-                Implement foreground service to draw overlay custom components(including camera) or in-app elements based on context.
-                Create permission manager to dynamically check run-time and special permissions, including permission chains, exposing checks as Flows for reactive handling.
+                Implement foreground service to draw overlay custom draggable components(including camera) or in-app elements based on context.
             }
             \item {
+                Create permission manager to dynamically check run-time and special permissions, including permission chains, exposing checks as Flows for reactive handling.
                 Separate business logic into use cases from UI layer to facilitate sharing between activities and services.
-                Enhance WebView interaction pattern: Communicate using enums and sent responses only to correct WebView, even if their requests had same commands.
+            }
+            \item {
                 Address memory leaks, incorrect context usage, and improve UI thread performance by running slow calls and disk accesses on appropriate dispatchers using LeakCanary and StrictMode.
             }
         \end{cvitems}
